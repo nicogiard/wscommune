@@ -1,0 +1,21 @@
+#{extends 'main.html' /}
+#{set title:'Département | ' + departement.libelleEnrichi /}
+
+<div id="container">
+	<div class="half">
+		<h2>${departement.libelleEnrichi}</h2>
+		<span>${countCommune} Communes :<span>
+		<ul>
+		#{paginate.list items:paginator, as:'commune'}
+			<li><a href="@{Application.commune(commune.code)}">${commune.libelleEnrichi} - (${commune.code})</a></li>
+		#{/paginate.list}
+		</ul>
+		#{paginate.summary items:paginator /}
+		#{paginate.controls items:paginator /}
+	</div>
+	<div class="half">
+		<img src="http://www.insee.fr/fr/methodes/nomenclatures/cog/img/${departement.region.code}/dep${departement.code}.jpg">
+		<img src="http://www.insee.fr/fr/methodes/nomenclatures/cog/img/${departement.region.code}/MinDep${departement.code}.jpg">
+		<img src="http://www.insee.fr/fr/methodes/nomenclatures/cog/img/${departement.region.code}/LegDep${departement.code}.jpg">
+	</div>
+</div>

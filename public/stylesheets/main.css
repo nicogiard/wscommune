@@ -1,0 +1,18 @@
+header {margin-top: 3px;}
+div.clear {clear: both;}
+
+/* Header Menu */
+header ul { width: 100%; height: 43px; background: #FFF url("../images/menu-bg.gif") top left repeat-x; font-size: 0.8em; font-family: "Lucida Grande", Verdana, sans-serif; font-weight: bold; list-style-type: none; margin: 0; padding: 0; }
+header ul li { display: block; float: left; margin: 0 0 0 5px; }
+header ul li a { height: 43px; color: #777; text-decoration: none; display: block; float: left; line-height: 200%; padding: 8px 15px 0; }
+header ul li a:hover { color: #333; }
+header ul li a.current{ color: #FFF; background: #FFF url("../images/current-bg.gif") top left repeat-x; padding: 5px 15px 0; }
+
+.horizontal_form label {width: 150px;}
+
+/* ---------------------------------------------------------------------------- */
+/* Pagination styles ---------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+.pagination-container ul {margin: 0;}
+.pagination-container ul li {display: inline;}
+.pagination .previous-off a, .pagination .next-off a, .pagination .off a:link, .pagination .off a:visited {color: #888888;}

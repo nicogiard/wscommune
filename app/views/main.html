@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>#{get 'title' /}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" media="screen" href="@{'/public/stylesheets/reset.css'}">
+        <link rel="stylesheet" type="text/css" media="screen" href="@{'/public/stylesheets/grid1380.css'}">
+        <link rel="stylesheet" type="text/css" media="screen" href="@{'/public/stylesheets/forms.css'}">
+        <link rel="stylesheet" type="text/css" media="screen" href="@{'/public/stylesheets/type.css'}">
+        <link rel="stylesheet" type="text/css" media="screen" href="@{'/public/stylesheets/ux.css'}">
+        <link rel="stylesheet" type="text/css" media="screen" href="@{'/public/stylesheets/main.css'}">
+        #{get 'moreStyles' /}
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+        <script src="@{'/public/javascripts/jquery-1.4.4.min.js'}" type="text/javascript" charset="utf-8"></script>
+        #{get 'moreScripts' /}
+    </head>
+    <body>
+    	<header>
+    		<ul>
+    			<li><a href="@{Application.regions()}" class="${request.action =~ 'Application.region' ? 'current' : ''}">R&eacute;gions</a></li>
+    			<li><a href="@{Application.departements()}" class="${request.action =~ 'Application.departement' ? 'current' : ''}">D&eacute;partements</a></li>
+    			<li><a href="@{Application.communes()}" class="${request.action =~ 'Application.commune' ? 'current' : ''}">Communes</a></li>
+    		</ul>
+    		<div class="clear"></div>
+    	</header>
+    	<section id="content">
+        	#{doLayout /}
+        <section>
+    </body>
+</html>

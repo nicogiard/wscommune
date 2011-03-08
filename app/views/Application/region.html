@@ -1,0 +1,19 @@
+#{extends 'main.html' /}
+#{set title:'Région | ' + region.libelleEnrichi /}
+
+<div id="container">
+	<div class="half">
+		<h2>${region.libelleEnrichi}</h2>
+		<span>${countDepartement} D&eacute;partements :<span>
+		<ul>
+		#{list items:departements, as:'departement'}
+			<li><a href="@{Application.departement(departement.code)}">${departement.libelleEnrichi} - (${departement.code})</a></li>
+		#{/list}
+		</ul>
+	</div>
+	<div class="half">
+		<img src="http://www.insee.fr/fr/methodes/nomenclatures/cog/img/${region.code}/reg${region.code}.jpg">
+		<img src="http://www.insee.fr/fr/methodes/nomenclatures/cog/img/${region.code}/MinReg${region.code}.jpg">
+		<img src="http://www.insee.fr/fr/methodes/nomenclatures/cog/img/${region.code}/LegReg${region.code}.jpg">
+	</div>
+</div>

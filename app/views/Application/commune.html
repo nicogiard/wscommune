@@ -1,0 +1,14 @@
+#{extends 'main.html' /}
+#{set title:'Commune' /}
+
+<h4>${commune.articleEnrichi} ${commune.libelleEnrichi}</h4>
+<form class="horizontal_form">
+	<ul>
+		<li><label>Code INSEE:</label><span>${commune.code}</span></li>
+		<li><label>Code Postal:</label><span>${commune.codePostal}</span></li>
+		<li><label>R&eacute;gion:</label><a href="@{Application.region(commune.region.code)}">${commune.region.libelleEnrichi} (${commune.region.code})</a></li>
+		<li><label>D&eacute;partement:</label><a href="@{Application.departement(commune.departement.code)}">${commune.departement.libelleEnrichi} (${commune.departement.code})</a></li>
+		<li><label>Arrondissement:</label><a href="#">${commune.arrondissement.libelleEnrichi} (${commune.arrondissement.code})</a></li>
+		<li><label>Canton:</label><a href="#">${commune.canton}</a></li>
+	</ul>
+</form>

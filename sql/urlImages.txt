@@ -1,0 +1,6 @@
+
+http://www.insee.fr/fr/methodes/nomenclatures/cog/img/{region}/{reg|dep|arr|pct}{code}.jpg
+
+http://www.insee.fr/fr/methodes/nomenclatures/cog/img/{region}/{MinReg|MinDep|MinArr|MinPct}{code}.jpg
+
+http://www.insee.fr/fr/methodes/nomenclatures/cog/img/{region}/{LegReg|LegDep|LegArr|LegPct}{code}.jpg

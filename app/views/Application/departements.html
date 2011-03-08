@@ -1,0 +1,14 @@
+#{extends 'main.html' /}
+#{set title:'Départements' /}
+
+<div id="container">
+	<div class="half">
+		<ul>
+		#{paginate.list items:paginator, as:'departement'}
+			<li><a href="@{Application.departement(departement.code)}">${departement.libelleEnrichi} - (${departement.code})</a></li>
+		#{/paginate.list}
+		</ul>
+		#{paginate.summary items:paginator /}
+		#{paginate.controls items:paginator /}
+	</div>
+</div>
